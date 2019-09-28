@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript Eventos</title>
+    
+</head>
+<body>
+    <h1>Mi curso</h1>
+    <p>Gestionando Eventos de botones - Ver consola</p>
+
+    <!-- Forma antigua de realizar las llamadas a funciones 
+    <button id="boton" onclick="cambiaColor();">Presioname</button> -->
+
+    <!-- Usando los listener -->
+    <button id="boton">Presioname</button>
+    <hr>
+
+    <form action="">
+        <input name="nombre" id="nombre" type="text">
+    </form>
+
+    <script src="03-eventos-timer.js"></script>
+    <!--Se lo pone en este lugar, porque es necesario que cargue el Documento, para ejecutar las instrucciones JS,
+        Si no se quiere esto, al código JS se debe ubicar window.addEventListener("load", () => {
+        // Ubicar el codigo que se va a ejecutar luego que la página se cargue });   -->
+    
+</body>
+</html>

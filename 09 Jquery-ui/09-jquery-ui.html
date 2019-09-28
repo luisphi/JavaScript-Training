@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudo de Eventos textos para Jquery UI</title>
+
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.theme.min.css">
+
+    <script src="../07 JQuery/lib/jquery-3.3.1.min.js"></script>
+    <script src="js/09-jquery-ui.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+        .elemento {
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background: lightblue;
+            margin: 20px;
+            float: left;
+        }
+        .lista li {
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Uso de eventos textos para Jquery UI</h1>
+
+    <h3>Hacer un tooltip</h3>
+    <a href="" id="misdatos" title="Acceder a mis datos">Mis datos</a>
+
+    <h3>Cuadros de dialogo</h3>
+    <div id="popup" title="Es la pantalla" style="display:none;">
+        Texto a mostrar el el popup
+    </div>
+
+    <h3>Calendario</h3>
+    <input type="text" id="calendario">
+
+    <h3>Pestañas</h3>
+    <div id="pestanas">
+        <ul>
+            <li><a href="#tabs-1">Pestaña 1</a></li>
+            <li><a href="#tabs-2">Pestaña 2</a></li>
+        </ul>
+
+        <div id="tabs-1">
+            Contenido del primer tab
+        </div>
+        <div id="tabs-2">
+            Contenido del segundo tab
+        </div>
+    </div>
+
+    <ul class="lista">
+        <li>GTA 5</li>
+        <li>mycraft</li>
+        <li>need for speed</li>
+        <li>Mario bros</li>
+        <li>Clash Royale</li>
+    </ul>
+
+    <div class="elemento">
+        Elemento 1
+    </div>
+    <div class="elemento">
+        Elemento 2
+    </div>
+    <div class="elemento">
+        Elemento 3
+    </div>
+
+</body>
+</html>

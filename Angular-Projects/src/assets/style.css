@@ -1,0 +1,7 @@
+.altoprecio {
+    color: red;
+    font-size: 17px;
+}
+.active {
+    border-bottom: yellow 2px solid;
+}

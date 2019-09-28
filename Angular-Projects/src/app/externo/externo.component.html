@@ -1,0 +1,17 @@
+<p>
+  externo works!
+</p>
+<!--USANDO PIPES O FILTROS -->
+Fecha: {{ fecha | date:'fullDate' | uppercase}} ---- Fecha2: {{ fecha | date:'dd-MM-yyyy'}} <hr>
+{{ 4| calculadora:2 }}
+<hr>
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()"/>
+
+<div *ngIf="!users">
+  CARGANDO...
+</div>
+
+<div *ngIf="users">
+  <h2>{{users.first_name + ' ' + users.last_name}}</h2>
+  <img src="{{users.avatar}}" alt="" srcset="">
+</div>

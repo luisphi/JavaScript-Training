@@ -1,0 +1,32 @@
+<div [ngStyle]="{'background': config.fondo}">
+    <h2>Hola desde {{ title }}</h2>
+    <p>Usando Directivas: *ngIf   :::::  *ngFor   :::::   [ngSwitch]  :::::  *ngSwitchCase</p>
+</div>
+<p>ANADIR MARCA</p> <!--Se usa la directiva para formularios-->
+<input type="text" [(ngModel)] = "mi_marca" (blur)="onBlur()"/>
+<p>La marca ingresada es: {{mi_marca}}</p>
+<button (click)="addMarca()">Añadir marca</button>
+
+<p>LISTADO DE LAS MARCAS</p>
+<ul>
+    <li *ngFor="let marca of marcas; let indice=index">
+        {{indice + ' - ' + marca}} <button (click)="deleteMarca(indice)">Borrar</button>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let deportivo of zapatillas">
+            {{deportivo.nombre}} - <strong [class.altoprecio]="deportivo.precio > 40">{{deportivo.precio}}</strong>
+            <span *ngIf="deportivo.precio <= 40" [style.background]="deportivo.precio<=40 ? 'green' : 'transperent'"> 
+                EN OFERTA!
+            </span>
+    </li>
+</ul>
+
+<p>EL COLOR DE LA MAYORIA DE LAS ZAPATILLAS ES:</p>
+<input type="text" [(ngModel)]="color"/>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'yellow'">El color es el amarillo</li>
+    <li *ngSwitchCase="'red'">El color es el Rojo</li>
+    <li *ngSwitchCase="'blue'">El color es el Azul</li>
+</ul>

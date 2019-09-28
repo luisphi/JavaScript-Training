@@ -1,0 +1,23 @@
+<h2>Página principal</h2>
+
+<!--PARA USAR EL IF - ELSE /// MODO 1-->
+<div *ngIf="identificado; else noIdentificado">
+  <h3>Estas identificado en la aplicación</h3>
+</div>
+
+<ng-template #noIdentificado>
+  <p>No estas identificado</p>
+  <button (click)="setIdentificado()">IDENTIFICARSE</button>
+</ng-template>
+
+<!--PARA USAR EL IF - ELSE /// MODO 2-->
+<div *ngIf="_identificado2; then identificado2 else noIdentificado2"></div>
+
+<ng-template #identificado2>
+  <h3>Estas identificado en la aplicación2</h3>
+</ng-template>
+
+<ng-template #noIdentificado2>
+  <p>No estas identificado2</p>
+  <button (click)="setIdentificado2()">IDENTIFICARSE 2</button>
+</ng-template>
